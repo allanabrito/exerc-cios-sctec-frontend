@@ -1,0 +1,51 @@
+.cabecalho {
+    background-color: #00CED1; /* verde água */
+    color: white; /* mudei pra branco pra ficar legível */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    font-weight: bold;
+}
+.logo {
+    color: white; /* ← O BRANCO DO "receitas" VAI AQUI */
+    font-size: 36px; /* tamanho grande */
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: bold; /* negrito */
+    letter-spacing: -1px;
+}
+
+.menu, .busca {
+    font-size: 14px;
+}
+.conteudo {
+    text-align: center;
+}
+
+.conteudo img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.conteudo h1, .conteudo h2 {
+    margin-bottom: 20px;
+}
+
+.conteudo ul {
+    text-align: left;
+    display: inline-block;
+}
+/* Arruma a lista numerada do Modo de Preparo */
+.conteudo ol {
+    text-align: left; /* alinha o texto à esquerda */
+    display: inline-block; /* mas centraliza o bloco todo */
+    list-style-position: inside; /* gruda o número no texto */
+    padding-left: 0; /* tira o recuo gigante */
+}
+
+.conteudo ol li {
+    margin-bottom: 10px; /* espaço entre cada passo */
+    line-height: 1.6; /* texto mais respirado */
+}
