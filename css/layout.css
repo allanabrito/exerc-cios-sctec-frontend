@@ -1,0 +1,63 @@
+/* css/layout.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.header-layout {
+  background-color: #4A5568;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+}
+
+.header-layout .logo {
+  font-weight: bold;
+}
+
+.header-layout nav ul {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.header-layout nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.main-layout {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  min-height: 70vh;
+}
+
+.secao {
+  border: 1px solid #333;
+  width: 300px;
+  height: 250px;
+  padding: 12px;
+}
+
+.secao h3 {
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.footer-layout {
+  background-color: #4A5568;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font-size: 14px;
+}
