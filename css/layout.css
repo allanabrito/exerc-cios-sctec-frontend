@@ -41,14 +41,14 @@ body {
   min-height: 70vh;
 }
 
-.secao {
+.coluna1 {
   border: 1px solid #333;
   width: 300px;
   height: 250px;
   padding: 12px;
 }
 
-.secao h3 {
+.coluna2 h3 {
   font-size: 14px;
   font-weight: normal;
   text-align: center;
