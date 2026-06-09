@@ -1,38 +1,48 @@
-<h2>Cadastro</h2>
+<h2>Cadastro Completo</h2>
 
 <input type="text" id="nome" placeholder="Seu nome">
 <br><br>
 <input type="email" id="email" placeholder="Seu email">
 <br><br>
+
+<label>Como conheceu a gente?</label><br>
+<select id="origem">
+  <option value="">Selecione...</option>
+  <option value="Google">Google</option>
+  <option value="Instagram">Instagram</option>
+  <option value="Indicacao">Indicação</option>
+</select>
+<br><br>
+
 <button id="botao">Cadastrar</button>
 <p id="resultado"></p>
 
 <script>
   const campoNome = document.getElementById("nome");
   const campoEmail = document.getElementById("email");
+  const campoOrigem = document.getElementById("origem");
   const botao = document.getElementById("botao");
   const paragrafo = document.getElementById("resultado");
 
   botao.addEventListener("click", function() {
     const nome = campoNome.value;
     const email = campoEmail.value;
+    const origem = campoOrigem.value; // Pega o valor do select
 
-    // Regra 1: Se nome ou email tiver vazio
-    if (nome === "" || email === "") {
-      paragrafo.textContent = "Preenche nome e email, pfvr!";
+    if (nome === "" || email === "" || origem === "") {
+      paragrafo.textContent = "Preenche tudo, até o select!";
       paragrafo.style.color = "red";
     } 
-    // Regra 2: Se email não tiver @
     else if (!email.includes("@")) {
       paragrafo.textContent = "Email inválido! Falta o @";
       paragrafo.style.color = "orange";
     }
-    // Regra 3: Se passou em tudo
     else {
-      paragrafo.textContent = "Cadastro feito! Bem-vinda, " + nome;
+      paragrafo.textContent = "Bem-vinda, " + nome + "! Email: " + email + " | Veio por: " + origem;
       paragrafo.style.color = "green";
       campoNome.value = "";
       campoEmail.value = "";
+      campoOrigem.value = ""; // Zera o select também
     }
   });
 </script>
