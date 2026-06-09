@@ -1,31 +1,38 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Formulário Básico</title>
-</head>
-<body>
-  
-  <input type="text" id="nome" placeholder="Digite seu nome">
-  <button id="botao">Enviar</button>
-  <p id="resultado"></p>
+<h2>Cadastro</h2>
 
-  <script>
-    // PASSO 1: Pegar os elementos do HTML e guardar em variáveis
-    const campoNome = document.getElementById("nome");
-    const botao = document.getElementById("botao");
-    const paragrafo = document.getElementById("resultado");
+<input type="text" id="nome" placeholder="Seu nome">
+<br><br>
+<input type="email" id="email" placeholder="Seu email">
+<br><br>
+<button id="botao">Cadastrar</button>
+<p id="resultado"></p>
 
-    // PASSO 2: Falar pro botão ficar "ouvindo" cliques
-    botao.addEventListener("click", function() {
-      
-      // PASSO 3: Quando clicar, pega o texto que tá no input
-      const textoDigitado = campoNome.value;
-      
-      // PASSO 4: Joga esse texto dentro do <p> na tela
-      paragrafo.textContent = textoDigitado;
-      
-    });
-  </script>
+<script>
+  const campoNome = document.getElementById("nome");
+  const campoEmail = document.getElementById("email");
+  const botao = document.getElementById("botao");
+  const paragrafo = document.getElementById("resultado");
 
-</body>
-</html>
+  botao.addEventListener("click", function() {
+    const nome = campoNome.value;
+    const email = campoEmail.value;
+
+    // Regra 1: Se nome ou email tiver vazio
+    if (nome === "" || email === "") {
+      paragrafo.textContent = "Preenche nome e email, pfvr!";
+      paragrafo.style.color = "red";
+    } 
+    // Regra 2: Se email não tiver @
+    else if (!email.includes("@")) {
+      paragrafo.textContent = "Email inválido! Falta o @";
+      paragrafo.style.color = "orange";
+    }
+    // Regra 3: Se passou em tudo
+    else {
+      paragrafo.textContent = "Cadastro feito! Bem-vinda, " + nome;
+      paragrafo.style.color = "green";
+      campoNome.value = "";
+      campoEmail.value = "";
+    }
+  });
+</script>
