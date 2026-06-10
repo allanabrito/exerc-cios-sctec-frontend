@@ -1,0 +1,119 @@
+body {
+  background: #ffdf00; /* Amarelo Brasil */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+h1 {
+  color: #009c3b; /* Verde Brasil */
+  text-align: center;
+}
+
+header p {
+  text-align: center;
+  color: #002776; /* Azul Brasil */
+  font-weight: bold;
+}
+
+main {
+  max-width: 600px;
+  margin: 20px auto;
+  background: white;
+  padding: 25px 30px 30px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+fieldset {
+  border: 2px solid #009c3b;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+legend {
+  color: #009c3b;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+.campo {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+/* 8. BÔNUS: Clima de torcida verde e amarelo */
+select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.opcoes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.opcoes label {
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  width: auto;
+}
+
+.linha {
+  display: flex;
+  gap: 15px;
+}
+
+.linha .campo {
+  flex: 1;
+}
+
+/* 7. Botão Solicitar orçamento */
+button {
+  width: 100%;
+  background: linear-gradient(90deg, #009c3b, #ffdf00);
+  color: #002776;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Bônus: foco verde nos campos */
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #009c3b;
+  box-shadow: 0 0 0 3px rgba(0, 156, 59, 0.2);
+}
